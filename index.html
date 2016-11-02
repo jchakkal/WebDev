@@ -1,0 +1,10 @@
+<html>
+<head>My First MapBox Map</head>
+<body>
+mapboxgl.accessToken = 'pk.eyJ1IjoiamNoYWtrYWwiLCJhIjoiY2l1ZXZ3NDNsMDBiMjJ5cDJsOWE3bTRiaCJ9.KEBicgJvyGsT3boBITwAXw'; // your access token
+var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/mapbox/streets-v9', // your style URL
+  center: [-74.50, 40], // starting position
+  zoom: 9 // starting zoom
+});
