@@ -158,4 +158,279 @@
     }
 
     section p.lead {
-      font
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      max-width: 40rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .card {
+      border-radius: 0.65rem;
+      border: 1px solid var(--border-subtle);
+      background: #fff;
+      padding: 1rem 1.1rem 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 1.6rem;
+    }
+
+    ul.simple-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    ul.simple-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .about-box {
+      border-radius: 0.65rem;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-alt);
+      padding: 1rem 1.1rem 1.2rem;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .about-box strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Contact */
+    .contact-strip {
+      margin-top: 2.2rem;
+      padding: 1.3rem 1.3rem;
+      border-radius: 0.7rem;
+      border: 1px solid var(--border-subtle);
+      background: #fafafa;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 2.5rem;
+      padding: 1.4rem 1.2rem 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .legal {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2,
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-contact {
+        text-align: left;
+      }
+
+      main {
+        padding-inline: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="brand">Woodbridge <span>Analytics</span></div>
+      <div class="nav-contact">
+        <div>Fiber & Broadband GIS Consulting</div>
+        <div><a href="mailto:joseph@woodbridgeanalytics.com">joseph@woodbridgeanalytics.com</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-kicker">Fiber · Broadband · Network analytics</div>
+      <h1>Market selection, GIS, and automation for network‑driven organizations.</h1>
+      <p class="hero-subtitle">
+        Woodbridge Analytics helps fiber and broadband providers, utilities, and infrastructure teams use GIS and data to pick the right markets, plan builds, and communicate strategy to leadership and investors.
+      </p>
+      <div class="hero-cta">
+        <a
+          class="btn-primary"
+          href="mailto:joseph@woodbridgeanalytics.com?subject=Fiber%20%2F%20broadband%20consulting%20inquiry"
+        >
+          Schedule an intro call
+        </a>
+      </div>
+      <p class="hero-meta">
+        Based in North Texas · 13+ years in telecom, mapping, and GIS analytics
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Core services</h2>
+      <p class="lead">
+        Engagements are scoped around clear commercial outcomes: where to build, how to prioritize capital, and how to explain the story behind the map to decision‑makers.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <div class="tag">01 · Market selection</div>
+          <h3>Fiber & broadband market intelligence</h3>
+          <p>
+            Use FCC Broadband Data, Census, and provider datasets to score and cluster markets, identify fiber overbuild opportunities, and size expansion plays and M&A targets.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">02 · Network planning</div>
+          <h3>Spatial analysis for build planning</h3>
+          <p>
+            Apply PostgreSQL/PostGIS and GIS tools to support network design, footprint analysis, and construction sequencing, with outputs your engineering and finance teams can share.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">03 · Automation</div>
+          <h3>GIS & data workflow automation</h3>
+          <p>
+            Replace manual GIS processes with Python and ArcPy automation, from data prep and quality checks to recurring reporting pipelines running on cloud infrastructure.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">04 · Decision support</div>
+          <h3>Dashboards & executive views</h3>
+          <p>
+            Design Tableau and mapping dashboards that give executives a single, trusted view of footprint, competition, build progress, and investment options.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fit / About -->
+    <section id="about">
+      <h2>Where Woodbridge Analytics fits best</h2>
+      <p class="lead">
+        A strong fit if you already have data and a network roadmap, but need focused GIS and analytics support to tie it all together for leadership, boards, or investors.
+      </p>
+      <div class="two-col">
+        <div>
+          <ul class="simple-list">
+            <li>• Fiber and broadband providers evaluating new markets or acquisition targets.</li>
+            <li>• Utilities and infrastructure owners planning or expanding network assets.</li>
+            <li>• Teams preparing BEAD/RDOF or similar funding cases and need defensible analysis.</li>
+            <li>• Organizations modernizing legacy GIS and network planning workflows.</li>
+          </ul>
+        </div>
+        <div class="about-box">
+          <strong>About Woodbridge Analytics</strong>
+          Woodbridge Analytics is led by a GIS and market selection specialist with
+          experience at Novos Fiber and Verizon building market intelligence
+          functions, Postgres/PostGIS data platforms, and GIS automation for fiber
+          deployment and competitive analysis.<br /><br />
+          Earlier roles at Facebook, Apple, and Amec Foster Wheeler focused on
+          telecom spatial data, mapping quality, and large‑scale infrastructure
+          projects, giving a broad view of how network data is created, maintained,
+          and used.
+        </div>
+      </div>
+    </section>
+
+    <!-- Example engagements -->
+    <section id="engagements">
+      <h2>Example engagement types</h2>
+      <p class="lead">
+        Projects are typically scoped as focused, time‑bounded engagements that can extend into ongoing advisory support if needed.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <div class="tag">Scenario A</div>
+          <h3>Market selection playbook</h3>
+          <p>
+            Build a repeatable market scoring framework that combines FCC Broadband
+            Data, competition, and density to rank markets and support board or
+            investment committee decisions.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">Scenario B</div>
+          <h3>Network planning analytics</h3>
+          <p>
+            Stand up or refine a Postgres/PostGIS environment and dashboards to
+            track build progress, forecast completion, and highlight risks in your
+            construction program.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="contact-strip">
+        <div>
+          Ready to explore a project or just test an idea? Share a brief note about
+          your network, markets you are considering, and the decision you need to
+          make.
+        </div>
+        <div>
+          <a
+            class="btn-primary"
+            href="mailto:joseph@woodbridgeanalytics.com?subject=Fiber%20%2F%20broadband%20consulting%20inquiry"
+          >
+            Email Woodbridge Analytics
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Woodbridge Analytics · Fiber & Broadband GIS Consulting ·
+    <a href="mailto:joseph@woodbridgeanalytics.com">joseph@woodbridgeanalytics.com</a>
+    <div class="legal">
+      C 2025 Karoor Tech, LLC. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
