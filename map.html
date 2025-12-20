@@ -1,0 +1,27 @@
+<html>
+  <head><title>My First MapBox Map</title>
+  
+          <script src='https://api.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+        
+  </head>
+<body>
+  <div id='map' style='width: 1000px; height: 800px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiamNoYWtrYWwiLCJhIjoiY2l1ZXZ3NDNsMDBiMjJ5cDJsOWE3bTRiaCJ9.KEBicgJvyGsT3boBITwAXw'; // your access token
+var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/jchakkal/civ1l61cx00nf2jqn16osuvfh', // your style URL
+  center: [-98.080475, 54.072712], // starting position
+  zoom: 3 // starting zoom
+});
+</script>
+  
+
+  </body>
+</html>
+
+
+
+
+
