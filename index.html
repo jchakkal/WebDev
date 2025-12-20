@@ -1,61 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Adding in the Leaflet CSS file -->
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-<!--[if lte IE 8]>
-     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
-<![endif]-->
-
-<!-- Adding Leaflet JavaScript file -->
-<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-
-<!-- Adding styling info for the map -->
-<style type="text/css">
-#map { height: 600px; }
-</style>
-
-</head>
-
-<body>
-
-  <!-- Creating the map div --->
-  <div id="map"></div>
-
-  <!-- The JavaScript that's powering the map -->
-  <script>
-
-  // Initialize the map
-  var map = L.map('map').setView([37.754700, -122.420790], 14);
-
-  // Add tiles
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  // Add a marker
-  var marker = L.marker([37.754700, -122.420790]).addTo(map);
-
-  // Add a popup to the marker
-  marker.bindPopup("CCSF");
-
-  </script>
-</body>
-</html>
   <meta charset="UTF-8" />
-  <title>Woodbridge Analytics | GIS & Data Consulting</title>
+  <title>Woodbridge Analytics | Consulting Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Woodbridge Analytics provides GIS, data, and analytics consulting for organizations that need clear, actionable insights." />
+  <meta name="description" content="Woodbridge Analytics provides GIS, data, and analytics consulting services to organizations that need clear, practical insight." />
   <style>
     :root {
       --bg: #ffffff;
-      --bg-alt: #f5f7fb;
+      --bg-alt: #f5f5f7;
       --primary: #1f4b7a;
-      --accent: #f4b000;
-      --text-main: #1f2933;
+      --text-main: #111827;
       --text-muted: #6b7280;
       --border-subtle: #e5e7eb;
-      --max-width: 900px;
+      --max-width: 880px;
     }
 
     * {
@@ -83,7 +41,7 @@
 
     header {
       border-bottom: 1px solid var(--border-subtle);
-      background: #ffffffcc;
+      background: #ffffffdd;
       backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
@@ -93,56 +51,51 @@
     .nav-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0.75rem 1.25rem;
+      padding: 0.8rem 1.2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
 
     .brand {
       font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
+      font-size: 1rem;
+    }
+
+    .brand span {
       color: var(--primary);
     }
 
     .nav-contact {
       font-size: 0.85rem;
       color: var(--text-muted);
-    }
-
-    .nav-contact a {
-      font-weight: 500;
+      text-align: right;
     }
 
     main {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.5rem 1.25rem 3rem;
+      padding: 2.4rem 1.2rem 3rem;
     }
 
     /* Hero */
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 2rem;
-      align-items: center;
-      padding-bottom: 3rem;
+      padding-bottom: 2.6rem;
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .hero-kicker {
       text-transform: uppercase;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.12em;
       font-size: 0.78rem;
       color: var(--text-muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .hero h1 {
-      font-size: clamp(1.9rem, 3vw, 2.4rem);
-      margin-bottom: 0.75rem;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      margin-bottom: 0.7rem;
     }
 
     .hero h1 span {
@@ -150,133 +103,270 @@
     }
 
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 0.98rem;
       color: var(--text-muted);
-      max-width: 30rem;
-      margin-bottom: 1.5rem;
+      max-width: 36rem;
+      margin-bottom: 1.4rem;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.6rem 1.15rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      border: 1px solid transparent;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
-        box-shadow 0.15s ease, transform 0.05s ease;
+    .hero-cta {
+      margin-bottom: 1rem;
     }
 
     .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
       background: var(--primary);
       color: #fff;
-      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+      transition: background 0.15s ease, box-shadow 0.15s ease,
+        transform 0.05s ease;
     }
 
     .btn-primary:hover {
       background: #173856;
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.2);
       transform: translateY(-1px);
       text-decoration: none;
     }
 
-    .btn-secondary {
-      background: #fff;
-      color: var(--primary);
-      border-color: var(--border-subtle);
-    }
-
-    .btn-secondary:hover {
-      background: var(--bg-alt);
-      text-decoration: none;
-    }
-
     .hero-meta {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
     }
 
-    .hero-card {
-      border-radius: 0.75rem;
+    /* Sections */
+    section {
+      padding-top: 2.4rem;
+    }
+
+    section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.45rem;
+    }
+
+    section p.lead {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      max-width: 38rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .card {
+      border-radius: 0.65rem;
       border: 1px solid var(--border-subtle);
-      background: linear-gradient(145deg, #ffffff, #f7fafc);
-      padding: 1.5rem 1.4rem;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      background: #fff;
+      padding: 1rem 1.1rem 1.2rem;
     }
 
-    .hero-card-title {
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
+    .card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
     }
 
-    .hero-card h2 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-card p {
+    .card p {
       font-size: 0.9rem;
       color: var(--text-muted);
-      margin-bottom: 0.75rem;
     }
 
-    .hero-list {
+    .tag {
+      display: inline-block;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 1.6rem;
+    }
+
+    ul.simple-list {
       list-style: none;
       font-size: 0.9rem;
       color: var(--text-main);
     }
 
-    .hero-list li {
+    ul.simple-list li {
       margin-bottom: 0.35rem;
+    }
+
+    .about-box {
+      border-radius: 0.65rem;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-alt);
+      padding: 1rem 1.1rem 1.2rem;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    /* Contact */
+    .contact-strip {
+      margin-top: 2.2rem;
+      padding: 1.3rem 1.3rem;
+      border-radius: 0.7rem;
+      border: 1px solid var(--border-subtle);
+      background: #fafafa;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 0.35rem;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.9rem;
     }
 
-    .hero-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(31, 75, 122, 0.06);
-      color: var(--primary);
-      margin-top: 0.5rem;
-    }
-
-    /* Sections */
-    section {
-      padding: 2.4rem 0 0;
-    }
-
-    section h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    section p.lead {
-      font-size: 0.95rem;
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 2.5rem;
+      padding: 1.4rem 1.2rem 2rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
-      margin-bottom: 1.3rem;
-      max-width: 34rem;
+      text-align: center;
     }
 
-    .grid-2 {
-      display
+    @media (max-width: 768px) {
+      .grid-2,
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-contact {
+        text-align: left;
+      }
+
+      main {
+        padding-inline: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="brand">Woodbridge <span>Analytics</span></div>
+      <div class="nav-contact">
+        <div>GIS & Data Consulting</div>
+        <div><a href="mailto:joseph@woodbridgeanalytics.com">joseph@woodbridgeanalytics.com</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-kicker">Consulting for data‑driven decisions</div>
+      <h1>Helping teams turn GIS and analytics into outcomes.</h1>
+      <p class="hero-subtitle">
+        Woodbridge Analytics works with public and private organizations to clarify questions, structure their data, and deliver maps, reports, and dashboards that leaders can act on.
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="mailto:joseph@woodbridgeanalytics.com?subject=Project%20inquiry">
+          Start a conversation
+        </a>
+      </div>
+      <p class="hero-meta">
+        Based in North Texas · Available for remote, hybrid, and project‑based work
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>Services</h2>
+      <p class="lead">
+        The work is scoped around a small number of clear questions, short feedback loops, and deliverables your stakeholders will actually use.
+      </p>
+      <div class="grid-2">
+        <div class="card">
+          <div class="tag">01 · GIS & mapping</div>
+          <h3>Spatial analysis & mapping</h3>
+          <p>
+            Use spatial data to evaluate sites, understand infrastructure, and communicate patterns to both technical and non‑technical audiences.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">02 · Analytics</div>
+          <h3>Reporting & decision support</h3>
+          <p>
+            Build clean, reliable views of your data so teams can answer recurring questions without rebuilding spreadsheets each time.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">03 · Process</div>
+          <h3>Workflows & documentation</h3>
+          <p>
+            Clarify how data flows through your organization, document key steps, and identify opportunities to simplify or automate.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">04 · Advisory</div>
+          <h3>Hands‑on guidance</h3>
+          <p>
+            Ongoing support for teams that want a trusted partner to review plans, sanity‑check ideas, and help prioritize the next step.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fit / About -->
+    <section id="about">
+      <h2>Is Woodbridge Analytics a fit?</h2>
+      <p class="lead">
+        A good engagement is practical, time‑bounded, and focused on solving specific problems rather than selling a complex platform.
+      </p>
+      <div class="two-col">
+        <div>
+          <ul class="simple-list">
+            <li>• You have data (and maybe GIS) in place, but need clearer insight and communication.</li>
+            <li>• You want a partner who can speak with both technical staff and business stakeholders.</li>
+            <li>• You value candid feedback and realistic timelines over buzzwords.</li>
+          </ul>
+        </div>
+        <div class="about-box">
+          <strong>About Woodbridge Analytics</strong><br />
+          Woodbridge Analytics is an independent consulting practice focused on GIS and data projects for organizations that need clear, defensible analysis without growing a large internal team.
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="contact-strip">
+        <div>
+          Interested in working together? Share a short note about your project, timeline, and what success would look like.
+        </div>
+        <div>
+          <a class="btn-primary" href="mailto:joseph@woodbridgeanalytics.com?subject=Project%20inquiry">
+            Email Woodbridge Analytics
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Woodbridge Analytics · GIS & Data Consulting ·
+    <a href="mailto:joseph@woodbridgeanalytics.com">joseph@woodbridgeanalytics.com</a>
+  </footer>
+</body>
+</html>
