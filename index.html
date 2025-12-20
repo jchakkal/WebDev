@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Woodbridge Analytics | Consulting Services</title>
+  <title>Woodbridge Analytics | Fiber & Broadband GIS Consulting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Woodbridge Analytics provides GIS, data, and analytics consulting services to organizations that need clear, practical insight." />
+  <meta
+    name="description"
+    content="Woodbridge Analytics provides GIS, market selection, and automation consulting for fiber, broadband, and network-driven organizations."
+  />
   <style>
     :root {
       --bg: #ffffff;
       --bg-alt: #f5f5f7;
       --primary: #1f4b7a;
+      --accent: #f4b000;
       --text-main: #111827;
       --text-muted: #6b7280;
       --border-subtle: #e5e7eb;
-      --max-width: 880px;
+      --max-width: 900px;
     }
 
     * {
@@ -61,6 +65,7 @@
     .brand {
       font-weight: 600;
       font-size: 1rem;
+      letter-spacing: 0.03em;
     }
 
     .brand span {
@@ -105,7 +110,7 @@
     .hero-subtitle {
       font-size: 0.98rem;
       color: var(--text-muted);
-      max-width: 36rem;
+      max-width: 40rem;
       margin-bottom: 1.4rem;
     }
 
@@ -117,7 +122,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1.25rem;
       border-radius: 999px;
       border: 1px solid transparent;
       background: var(--primary);
@@ -153,220 +158,4 @@
     }
 
     section p.lead {
-      font-size: 0.96rem;
-      color: var(--text-muted);
-      margin-bottom: 1.2rem;
-      max-width: 38rem;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.4rem;
-    }
-
-    .card {
-      border-radius: 0.65rem;
-      border: 1px solid var(--border-subtle);
-      background: #fff;
-      padding: 1rem 1.1rem 1.2rem;
-    }
-
-    .card h3 {
-      font-size: 0.98rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 0.73rem;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      color: var(--text-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 1.6rem;
-    }
-
-    ul.simple-list {
-      list-style: none;
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    ul.simple-list li {
-      margin-bottom: 0.35rem;
-    }
-
-    .about-box {
-      border-radius: 0.65rem;
-      border: 1px solid var(--border-subtle);
-      background: var(--bg-alt);
-      padding: 1rem 1.1rem 1.2rem;
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    /* Contact */
-    .contact-strip {
-      margin-top: 2.2rem;
-      padding: 1.3rem 1.3rem;
-      border-radius: 0.7rem;
-      border: 1px solid var(--border-subtle);
-      background: #fafafa;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.8rem;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--border-subtle);
-      margin-top: 2.5rem;
-      padding: 1.4rem 1.2rem 2rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .grid-2,
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-contact {
-        text-align: left;
-      }
-
-      main {
-        padding-inline: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="nav-inner">
-      <div class="brand">Woodbridge <span>Analytics</span></div>
-      <div class="nav-contact">
-        <div>GIS & Data Consulting</div>
-        <div><a href="mailto:joseph@woodbridgeanalytics.com">joseph@woodbridgeanalytics.com</a></div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero" id="top">
-      <div class="hero-kicker">Consulting for data‑driven decisions</div>
-      <h1>Helping teams turn GIS and analytics into outcomes.</h1>
-      <p class="hero-subtitle">
-        Woodbridge Analytics works with public and private organizations to clarify questions, structure their data, and deliver maps, reports, and dashboards that leaders can act on.
-      </p>
-      <div class="hero-cta">
-        <a class="btn-primary" href="mailto:joseph@woodbridgeanalytics.com?subject=Project%20inquiry">
-          Start a conversation
-        </a>
-      </div>
-      <p class="hero-meta">
-        Based in North Texas · Available for remote, hybrid, and project‑based work
-      </p>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-      <h2>Services</h2>
-      <p class="lead">
-        The work is scoped around a small number of clear questions, short feedback loops, and deliverables your stakeholders will actually use.
-      </p>
-      <div class="grid-2">
-        <div class="card">
-          <div class="tag">01 · GIS & mapping</div>
-          <h3>Spatial analysis & mapping</h3>
-          <p>
-            Use spatial data to evaluate sites, understand infrastructure, and communicate patterns to both technical and non‑technical audiences.
-          </p>
-        </div>
-        <div class="card">
-          <div class="tag">02 · Analytics</div>
-          <h3>Reporting & decision support</h3>
-          <p>
-            Build clean, reliable views of your data so teams can answer recurring questions without rebuilding spreadsheets each time.
-          </p>
-        </div>
-        <div class="card">
-          <div class="tag">03 · Process</div>
-          <h3>Workflows & documentation</h3>
-          <p>
-            Clarify how data flows through your organization, document key steps, and identify opportunities to simplify or automate.
-          </p>
-        </div>
-        <div class="card">
-          <div class="tag">04 · Advisory</div>
-          <h3>Hands‑on guidance</h3>
-          <p>
-            Ongoing support for teams that want a trusted partner to review plans, sanity‑check ideas, and help prioritize the next step.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fit / About -->
-    <section id="about">
-      <h2>Is Woodbridge Analytics a fit?</h2>
-      <p class="lead">
-        A good engagement is practical, time‑bounded, and focused on solving specific problems rather than selling a complex platform.
-      </p>
-      <div class="two-col">
-        <div>
-          <ul class="simple-list">
-            <li>• You have data (and maybe GIS) in place, but need clearer insight and communication.</li>
-            <li>• You want a partner who can speak with both technical staff and business stakeholders.</li>
-            <li>• You value candid feedback and realistic timelines over buzzwords.</li>
-          </ul>
-        </div>
-        <div class="about-box">
-          <strong>About Woodbridge Analytics</strong><br />
-          Woodbridge Analytics is an independent consulting practice focused on GIS and data projects for organizations that need clear, defensible analysis without growing a large internal team.
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="contact-strip">
-        <div>
-          Interested in working together? Share a short note about your project, timeline, and what success would look like.
-        </div>
-        <div>
-          <a class="btn-primary" href="mailto:joseph@woodbridgeanalytics.com?subject=Project%20inquiry">
-            Email Woodbridge Analytics
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    Woodbridge Analytics · GIS & Data Consulting ·
-    <a href="mailto:joseph@woodbridgeanalytics.com">joseph@woodbridgeanalytics.com</a>
-  </footer>
-</body>
-</html>
+      font
